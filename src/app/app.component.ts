@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
-
 import io from 'socket.io-client';
+import { environment } from 'src/environments/environment';
 
-const socket = io('http://localhost:3000');
+
+const socket = io(environment.api);
 
 @Component({
   selector: 'app-root',
